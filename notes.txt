@@ -1,0 +1,18 @@
+
+// how to preserve status with fetch call
+async myFunc(){
+  let response = await fetch('url...')
+  let body = await response.json()
+
+  return {
+    status: response.status,
+    body
+  }
+}
+
+npx create-react-app myApp --template typescript
+
+
+import { RouterComponentProps } from 'react-router-dom'
+
+@reduxjs/toolkit
