@@ -1,5 +1,6 @@
 import React from 'react'
-import { beer } from '../custom-types' // eslint-disable-line no-unused-vars
+// eslint-disable-next-line
+import { beer } from '../custom-types'
 
 const Tile = ({ beer }: { beer: beer }) => {
   return (

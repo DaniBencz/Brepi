@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Tile from './Tile'
+// eslint-disable-next-line
 import { beer, beers } from '../custom-types'
 
 const BeersTSX = (props: any) => {

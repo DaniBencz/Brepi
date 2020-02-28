@@ -1,5 +1,6 @@
 import { createStore, combineReducers } from "redux"
 import { composeWithDevTools } from 'redux-devtools-extension'
+// eslint-disable-next-line
 import { beers } from './custom-types'
 
 const beerReducer = (beers: beers = [], action: any) => { // counter is the initial state of this reducer
