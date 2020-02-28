@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+#header{
+  background-color: lightgrey;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.nav-link{
+  margin: 5px;
+}
+
 .selected{
   background-color: bisque;
 }
