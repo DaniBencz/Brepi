@@ -4,6 +4,7 @@ import './App.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Custom from './components/Custom'
+//import BeersClass from './components/BeersClass'
 import Beers from './components/Beers'
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           <Route path='/beers'>
             <Beers/>
           </Route>
+          {/* <Route path='/beers'>
+            <BeersClass/>
+          </Route> */}
           <Route path='/orders'>
             <p>Orders</p>
           </Route>
