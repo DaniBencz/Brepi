@@ -1,34 +1,29 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-
-type beer = {
-  id: number
-  name: string
-}
-
-type beers = {
-  beers: []
-}
+import Tile from './Tile'
+import { beer, beers } from '../custom-types'
 
 const BeersTSX = (props: any) => {
 
-  const { beers }: beers = props
-  const { add }: { add: (x: beers) => {} } = props
+  const { beers }: { beers: beers } = props
+  const { add }: { add: (beers: beers) => {} } = props
+  const { page }: { page: number } = props
 
   useEffect(() => {
-    fetch('https://api.punkapi.com/v2/beers?page=1&per_page=6')
+    fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=6`)
       .then(resp => resp.json())
       .then(resp => {
         console.log('resp: ', resp)
-        // send resp to redux
         add(resp)
       })
-  }, [add])
+  }, [add, page]) // if no 2nd parameter (e.g.[]) is provided, it will run endlessly
 
   return (
     <>
       {beers.map((beer: beer) => {
-        return <p key={beer.id}>{beer.name}</p>
+        return (
+          <Tile beer={beer} />
+        )
       })}
     </>
   )
@@ -36,7 +31,8 @@ const BeersTSX = (props: any) => {
 
 const mapStateToProps = (state: any) => {
   return {
-    beers: state.beers
+    beers: state.beers,
+    page: state.page
   }
 }
 
