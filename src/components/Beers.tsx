@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Tile from './Tile'
 // eslint-disable-next-line
 import { beer, beers } from '../custom-types'
+import Pagination from './Pagination'
 
 const BeersTSX = (props: any) => {
 
@@ -23,9 +24,10 @@ const BeersTSX = (props: any) => {
     <>
       {beers.map((beer: beer) => {
         return (
-          <Tile beer={beer} />
+          <Tile key={beer.id} beer={beer} />
         )
       })}
+      <Pagination />
     </>
   )
 }

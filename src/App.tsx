@@ -6,7 +6,6 @@ import Header from './components/Header'
 import Custom from './components/Custom'
 //import BeersClass from './components/BeersClass'
 import Beers from './components/Beers'
-import Pagination from './components/Pagination'
 
 function App() {
   return (
@@ -33,7 +32,6 @@ function App() {
             <p>404</p>
           </Route>
         </Switch>
-        <Pagination/>
       </div>
     </Router>
   )

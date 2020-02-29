@@ -1,4 +1,5 @@
-export type beer = {
+//export type beer = { // works too
+export interface beer {
   id: number
   name: string
   image_url: string
