@@ -2,25 +2,38 @@
   text-align: center;
 }
 
-#header{
+#header {
   background-color: lightgrey;
   margin-top: 30px;
   padding: 20px;
 }
 
-.nav-link{
+.nav-link {
   margin: 5px;
 }
 
-.selected{
+.selected {
   background-color: bisque;
 }
 
-.tile{
+#beersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: auto;
+}
+
+.tile {
   margin: 5px;
   padding: 5px;
-  width: 150px;
+  width: 170px;
+  height: 170px;
   border-color: black;
   border-width: 2px;
   border-style: solid;
+}
+
+.button{
+  margin: 5px;
+  width: 100px;
 }

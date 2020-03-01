@@ -13,9 +13,9 @@ const PaginationJSX = (props: PagProps) => {
 
   return (
     <>
-      <p>Pagination</p>
-      <button onClick={() => { change(page - 1) }}>Previous Page</button>
-      <button onClick={() => { change(page + 1) }}>Next Page</button>
+      <h3>Pagination</h3>
+      <button className="button" onClick={() => { change(page - 1) }}>Previous Page</button>
+      <button className="button" onClick={() => { change(page + 1) }}>Next Page</button>
     </>
   )
 }
