@@ -22,11 +22,14 @@ const BeersTSX = (props: any) => {
 
   return (
     <>
-      {beers.map((beer: beer) => {
-        return (
-          <Tile key={beer.id} beer={beer} />
-        )
-      })}
+      <h3>Page: {`${page}`}</h3>
+      <div id="beersWrapper">
+        {beers.map((beer: beer) => {
+          return (
+            <Tile key={beer.id} beer={beer} />
+          )
+        })}
+      </div>
       <Pagination />
     </>
   )

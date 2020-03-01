@@ -11,10 +11,12 @@ const beerReducer = (beers: beers = [], action: any) => { // counter is the init
   }
 }
 
-const pageReducer = (page = 1, action: any) => {
+const pageReducer = (page: number = 1, action: any) => {
   console.log('page reducer: ', page)
   switch (action.type) {
-    case 'CHANGE': return action.page
+    case 'CHANGE':
+      if (action.page > 0) return action.page
+      return page
     default: return page
   }
 }
