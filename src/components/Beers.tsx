@@ -22,7 +22,6 @@ const BeersTSX = (props: any) => {
 
   return (
     <>
-      <h3>Page: {`${page}`}</h3>
       <div id="beersWrapper">
         {beers.map((beer: beer) => {
           return (
