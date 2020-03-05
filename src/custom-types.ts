@@ -5,4 +5,5 @@ export interface beer {
   image_url: string
 }
 
-export type beers = beer[]
+// export type beers = beer[]
+export type beers = Array<beer>

@@ -15,3 +15,5 @@ npx create-react-app myApp --template typescript
 import { RouterComponentProps } from 'react-router-dom'
 
 @reduxjs/toolkit
+
+for deployment with router: create _redirects file
