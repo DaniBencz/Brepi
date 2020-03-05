@@ -11,7 +11,7 @@ interface TileProps {
 const Tile = ({ beer }: { beer: beer }) => {
   return (
     <div className="tile">
-      <p>{beer.name}</p>
+      <p className="title">{beer.name}</p>
       <img style={{ height: "100px" }} src={beer.image_url} alt={beer.name}></img>
     </div>
   )

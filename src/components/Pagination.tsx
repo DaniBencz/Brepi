@@ -13,7 +13,7 @@ const PaginationJSX = (props: PagProps) => {
 
   return (
     <>
-      <h3>Page: {`${page}`}</h3>
+      <h3 id="page">Page: {`${page}`}</h3>
       <button className="button" onClick={() => { change(page - 1) }}>Previous Page</button>
       <button className="button" onClick={() => { change(page + 1) }}>Next Page</button>
     </>
